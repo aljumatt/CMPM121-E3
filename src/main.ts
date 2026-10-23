@@ -1,3 +1,7 @@
+// @deno-types="./asset-url.d.ts"
+import hatUrl from "./assets/hat.svg?no-inline";
+import dogUrl from "./assets/simpleDog.svg?no-inline";
+
 const portrait = document.querySelector<HTMLDivElement>("#portrait")!;
 const spin = document.querySelector<HTMLButtonElement>("#spin")!;
 
@@ -17,6 +21,25 @@ head.setAttribute("stroke", "#302c29");
 head.setAttribute("stroke-width", "4");
 face.append(head);
 
+// dog (https://staging.svgrepo.com/download/147415/dog.svg)
+const dogImg = document.createElementNS("http://www.w3.org/2000/svg", "image");
+dogImg.setAttribute("href", dogUrl);
+dogImg.setAttribute("x", "50");
+dogImg.setAttribute("y", "75");
+dogImg.setAttribute("width", "100");
+dogImg.setAttribute("height", "100");
+face.append(dogImg);
+
+// hat (https://www.svgrepo.com/svg/120390/men-hat)
+const hatImg = document.createElementNS("http://www.w3.org/2000/svg", "image");
+hatImg.setAttribute("href", hatUrl);
+hatImg.setAttribute("x", "50");
+hatImg.setAttribute("y", "10");
+hatImg.setAttribute("width", "100");
+hatImg.setAttribute("height", "100");
+face.append(hatImg);
+
+/*
 const leftEye = document.createElementNS(
   "http://www.w3.org/2000/svg",
   "ellipse",
@@ -58,6 +81,7 @@ mouth.setAttribute("stroke", "#302c29");
 mouth.setAttribute("stroke-width", "4");
 mouth.setAttribute("stroke-linecap", "round");
 face.append(mouth);
+*/
 
 portrait.append(face);
 
