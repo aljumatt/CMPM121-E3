@@ -12,6 +12,6 @@ A image fo a dog witha cartoon facny hat imposed on top of it, with the hat taki
 
 A face with the bottom half blue gradienting up the top half being yellow with a frown drawn via a bezier curve and has eyes.
 
-## choice criteria
+## choice criteria (chose C)
 
 I will choose the branch based on which is the most visualy interesting.
